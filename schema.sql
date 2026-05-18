@@ -315,6 +315,12 @@ USING (TRUE);
 
 -- Demo/public read policies for published review environments.
 -- Remove or restrict these policies before using production data.
+DROP POLICY IF EXISTS "Demo visitors can read animals" ON animals;
+CREATE POLICY "Demo visitors can read animals"
+ON animals FOR SELECT
+TO anon
+USING (TRUE);
+
 DROP POLICY IF EXISTS "Demo visitors can read municipalities" ON municipalities;
 CREATE POLICY "Demo visitors can read municipalities"
 ON municipalities FOR SELECT
