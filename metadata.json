@@ -1,0 +1,6 @@
+{
+  "name": "SAMIS - Stray Animals Management Information System",
+  "description": "A centralized stray animal management platform for Türkiye managing municipalities, facilities, animals, health records, and adoptions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=JetBrains+Mono:wght@700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-[#f8fafc] text-slate-900 font-sans antialiased;
+  }
+}
+
+/* Bold Typography Theme Styles */
+.font-black-italic {
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: -0.05em;
+}
+
+.heading-bold {
+  @apply font-black uppercase tracking-tight;
+}
+
+.card-bold {
+  @apply bg-white border-l-4 border-black p-6 shadow-sm transition-all hover:shadow-md;
+}
+
+.table-header {
+  @apply bg-slate-50 text-[10px] font-black uppercase text-slate-500 border-b border-slate-100;
+}
+
+.btn-primary-bold {
+  @apply bg-black text-white px-4 py-2 rounded-sm text-xs font-black uppercase tracking-wider transition-all hover:bg-slate-800 active:scale-95;
+}
+
+.badge-bold {
+  @apply px-2 py-0.5 rounded-full font-bold text-[10px] uppercase;
+}
