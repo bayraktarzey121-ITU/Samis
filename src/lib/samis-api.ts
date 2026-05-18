@@ -118,7 +118,7 @@ export async function getDashboardData(): Promise<DashboardData> {
     supabase
       .from('animal_location_history')
       .select(
-        'event_type, location_lat, location_lng, notes, animal:animals(microchip_id, species, breed, status), facility:facilities(name), officer:users(full_name)',
+        'event_type, location_lat, location_lng, notes, animal:animals(microchip_id, species, breed, status), facility:facilities!animal_location_history_facility_id_fkey(name), officer:users(full_name)',
       )
       .order('event_date', { ascending: false })
       .limit(6),
